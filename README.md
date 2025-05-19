@@ -17,26 +17,21 @@ Modernize a legacy telecom ETL system that processed daily Call Detail Records (
 
 ```mermaid
 flowchart TD
-  A[CDR Files] --> B[UNIX Shell Scripts]
-  B --> C[Oracle Staging Tables (Partitioned Daily)]
-  C --> D[ETL Transformations in PL/SQL]
-  D --> E[Extract Tables for Reports]
-  E --> F[Daily Scheduled Reports (Crontab)]
+	A[CDR Files] --> B[UNIX Shell Scripts]
+	B --> C[Oracle Staging Tables - Daily Partition]
+	C --> D[ETL Transformations - PL/SQL]
+	D --> E[Extract Tables for Reports]
+	E --> F[Daily Scheduled Reports - Crontab]
 ```
 
 ### 🌐 Modern ETL with Delta Lake and Unity Catalog
 
 ```mermaid
 flowchart TD
-  A[CDR Data Landing (Azure Data Lake Gen2 - Raw)] --> B[Bronze Table (Raw Ingest)]
-  B --> C[Silver Table (Cleaned & Transformed)]
-  C --> D[Gold Table (Aggregated KPIs)]
-  D --> E[Power BI / Notebooks for Reports]
-  subgraph Databricks with Unity Catalog
-    B
-    C
-    D
-  end
+	A[CDR Data Landing - Azure Data Lake Gen2] --> B[Bronze Table - Raw Data]
+	B --> C[Silver Table - Cleaned & Parsed]
+	C --> D[Gold Table - Aggregated KPIs]
+	D --> E[Power BI / Dashboards]
 ```
 
 ## 🧪 Dataset Simulated
@@ -115,8 +110,8 @@ flowchart TD
 
 If you found this project helpful or want to collaborate, feel free to connect:
 
-- 💼 LinkedIn: [Your Name](https://linkedin.com/in/your-profile)
-- 📧 Email: your.email@example.com
+- 💼 LinkedIn: Ayub Khan https://www.linkedin.com/in/ayub-khan-85073556/
+- 📧 Email: khanayubchand@gmail.com
 
 ## 📃 License
 
